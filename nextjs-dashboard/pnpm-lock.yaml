@@ -18,6 +18,9 @@ importers:
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.4)
+      '@vercel/edge-config':
+        specifier: ^1.4.0
+        version: 1.4.0
       '@vercel/postgres':
         specifier: ^0.8.0
         version: 0.8.0
@@ -325,6 +328,18 @@ packages:
 
   '@types/pg@8.6.6':
     resolution: {integrity: sha512-O2xNmXebtwVekJDD+02udOncjVcMZQuTEQEMpKJ0ZRf5E7/9JJX3izhKUcUifBkyKpljyUM6BTgy2trmviKlpw==}
+
+  '@vercel/edge-config-fs@0.1.0':
+    resolution: {integrity: sha512-NRIBwfcS0bUoUbRWlNGetqjvLSwgYH/BqKqDN7vK1g32p7dN96k0712COgaz6VFizAm9b0g6IG6hR6+hc0KCPg==}
+
+  '@vercel/edge-config@1.4.0':
+    resolution: {integrity: sha512-69Wg5gw9DzwnyUmnjToSeLRm1nm8mCPgN0kflX8EHRHyqvzH80wPem5A8rI2LXPb2Y9tJNoqN3vXPcQhS2Wh5g==}
+    engines: {node: '>=14.6'}
+    peerDependencies:
+      '@opentelemetry/api': ^1.7.0
+    peerDependenciesMeta:
+      '@opentelemetry/api':
+        optional: true
 
   '@vercel/postgres@0.8.0':
     resolution: {integrity: sha512-/QUV9ExwaNdKooRjOQqvrKNVnRvsaXeukPNI5DB1ovUTesglfR/fparw7ngo1KUWWKIVpEj2TRrA+ObRHRdaLg==}
@@ -1358,6 +1373,12 @@ snapshots:
       '@types/node': 20.14.8
       pg-protocol: 1.6.1
       pg-types: 2.2.0
+
+  '@vercel/edge-config-fs@0.1.0': {}
+
+  '@vercel/edge-config@1.4.0':
+    dependencies:
+      '@vercel/edge-config-fs': 0.1.0
 
   '@vercel/postgres@0.8.0':
     dependencies:
